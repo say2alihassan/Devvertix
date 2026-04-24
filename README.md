@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Devvertix — AI & Mobile Product Studio
+
+Marketing site for **Devvertix**, a product studio building AI-native SaaS and mobile apps. Shipped 11+ apps to 1M+ users across FinTech, Q-Commerce, Mobility, AI, and more.
+
+Live at: _(coming soon — deploying to Vercel)_
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router) + React 19
+- **Styling:** Tailwind CSS v4 (with custom design tokens)
+- **Animation:** framer-motion
+- **Icons:** lucide-react
+- **Language:** TypeScript
+
+Design system lives in [`.stitch/DESIGN.md`](./.stitch/DESIGN.md) — atmosphere, color tokens, typography, layout rules.
 
 ## Getting Started
 
-First, run the development server:
+**Requires Node.js 20+ (LTS).** A `.nvmrc` is included:
 
 ```bash
+nvm use                 # picks up Node 22 from .nvmrc
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) (or the port shown in the terminal).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+  layout.tsx           Root layout + fonts + Navbar
+  page.tsx             Home page (composes all sections)
+  globals.css          Tailwind + design tokens + utilities
 
-## Learn More
+components/
+  Navbar.tsx           Floating glass nav
+  Hero.tsx             Hero with live-status pill + metric strip
+  TechStack.tsx        Auto-scrolling marquee
+  Services.tsx         Bento-grid service offerings
+  Process.tsx          5-step vertical timeline
+  Projects.tsx         11 live apps (iOS & Android) with filter
+  CaseStudies.tsx      Metrics-first outcome cards
+  WhyChooseUs.tsx      Proof card + reason list
+  Contact.tsx          Split form + direct contact
+  Footer.tsx           Multi-column footer
+  ui/                  Button, Input, Textarea, Label primitives
 
-To learn more about Next.js, take a look at the following resources:
+lib/
+  utils.ts             cn() helper (clsx + tailwind-merge)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+.stitch/
+  DESIGN.md            Design system source of truth
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Scripts
 
-## Deploy on Vercel
+| Command | What it does |
+|---|---|
+| `npm run dev` | Start dev server (webpack) |
+| `npm run build` | Production build |
+| `npm run start` | Run production server |
+| `npm run lint` | Run ESLint |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploying to Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push to GitHub.
+2. Import the repo at [vercel.com/new](https://vercel.com/new).
+3. Vercel auto-detects Next.js and deploys on every push to `main`.
+4. Add your custom domain under **Project Settings → Domains**.
+
+## Featured Projects
+
+A selection of production apps shipped by the Devvertix team:
+
+- **Clickypk** — 1M+ downloads, Pakistan's classifieds super-app
+- **Krave Mart** — Q-commerce grocery delivery
+- **Drive Mate** — Peer-to-peer car sharing
+- **Ask AI** — Conversational AI assistant
+- **Tabbio** — AI-assisted CV maker & job search
+- …plus Carvonix, Mappy, Cohere, Perfect Pay, Trick and Treats, Story Formed Life
+
+See the full list in [`components/Projects.tsx`](./components/Projects.tsx).
+
+## License
+
+© Devvertix. All rights reserved.
