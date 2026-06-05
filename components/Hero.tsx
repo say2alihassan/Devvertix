@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Zap } from "lucide-react";
 
 const metrics = [
-  { value: "11+", label: "Apps Shipped" },
-  { value: "1M+", label: "Downloads" },
-  { value: "9+", label: "Industries" },
-  { value: "24/7", label: "Delivery" },
+  { value: "50+", label: "Products Delivered" },
+  { value: "1M+", label: "End Users" },
+  { value: "9+", label: "Industries Served" },
+  { value: "US/EU/MENA", label: "Clients Worldwide" },
 ];
 
 export default function Hero() {
@@ -53,7 +53,7 @@ export default function Hero() {
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400" />
             </span>
             <span className="text-muted-foreground">
-              Accepting new projects for Q2 2026
+              Accepting new projects for Q3 2026
             </span>
           </div>
         </motion.div>
@@ -77,8 +77,17 @@ export default function Hero() {
         >
           Devvertix is a product studio for founders building{" "}
           <span className="text-foreground">AI-native SaaS</span> and{" "}
-          <span className="text-foreground">mobile apps</span>. We've shipped 11+
-          apps to 1M+ users — and we'd like to ship yours next.
+          <span className="text-foreground">mobile apps</span>. We've delivered 50+ products to 1M+ users
+          across the US, UK, and UAE — and we'd like to ship yours next.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.13, ease: "easeOut" }}
+          className="text-sm text-muted-foreground mb-8"
+        >
+          Async-first · US-timezone friendly · NDA on day one
         </motion.p>
 
         <motion.div
@@ -91,7 +100,7 @@ export default function Hero() {
             href="#contact"
             className="group inline-flex items-center justify-center rounded-xl h-12 px-7 text-base font-medium text-white bg-[linear-gradient(135deg,#8B5CF6_0%,#3B82F6_100%)] hover:brightness-110 shadow-[0_0_40px_-10px_rgba(139,92,246,0.6)] hover:shadow-[0_0_60px_-10px_rgba(139,92,246,0.8)] transition-all"
           >
-            Book a Strategy Call
+            Book a Free Strategy Call
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </a>
           <a

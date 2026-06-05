@@ -167,7 +167,7 @@ export default function Projects() {
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-80px" }}
               className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] rounded-full glass text-muted-foreground mb-5"
             >
               <Sparkles className="w-3 h-3" />
@@ -176,7 +176,7 @@ export default function Projects() {
             <motion.h2
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5 }}
               className="text-4xl md:text-5xl font-semibold tracking-[-0.03em] mb-4"
             >
@@ -185,7 +185,7 @@ export default function Projects() {
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: 0.05 }}
               className="text-muted-foreground text-lg"
             >
@@ -197,7 +197,7 @@ export default function Projects() {
           <motion.div
             initial={{ opacity: 0, x: 12 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex items-center gap-1.5 p-1 rounded-full border border-border bg-surface/60 backdrop-blur-md"
           >
@@ -229,7 +229,8 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: (index % 6) * 0.05 }}
-              className="group relative rounded-2xl border border-border bg-surface/60 backdrop-blur-xl overflow-hidden hover:border-border-strong transition-all hover:-translate-y-0.5"
+              style={{ willChange: "transform" }}
+              className="group relative rounded-2xl border border-border bg-surface/60 backdrop-blur-sm overflow-hidden hover:border-border-strong transition-all hover:-translate-y-0.5"
             >
               <div
                 className={cn(
@@ -275,7 +276,7 @@ export default function Projects() {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-12 rounded-2xl border border-border glass p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
         >

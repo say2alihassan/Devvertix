@@ -76,22 +76,19 @@ html {
 
 body {
   @apply bg-background text-foreground font-sans antialiased;
-  background-image:
-    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(139, 92, 246, 0.08), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 90% 20%, rgba(59, 130, 246, 0.05), transparent 60%);
-  background-attachment: fixed;
 }
 
-/* Subtle noise for premium feel */
-body::before {
+/* Fixed ambient gradients — isolated to their own composited layer, never repaints on scroll */
+body::after {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 1;
-  opacity: 0.015;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.9'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-  mix-blend-mode: overlay;
+  z-index: 0;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(139, 92, 246, 0.08), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 90% 20%, rgba(59, 130, 246, 0.05), transparent 60%);
+  will-change: transform;
 }
 
 /* Custom utilities */
@@ -138,4 +135,5 @@ body::before {
 
 .animate-marquee {
   animation: marquee 40s linear infinite;
+  will-change: transform;
 }

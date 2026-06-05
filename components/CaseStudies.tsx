@@ -8,9 +8,9 @@ const caseStudies = [
     client: "FinTech Startup",
     title: "Automated Financial Reporting Agent",
     description:
-      "Multi-agent system that gathers financial data, generates reports, and flags anomalies — autonomously.",
+      "A multi-agent system that connects to 6 data sources, generates formatted reports on schedule, and flags anomalies — autonomously. Replaced 40 hours of manual analyst work every week.",
     metrics: [
-      { label: "Hours saved / wk", value: "40", icon: Clock },
+      { label: "Hours saved / wk", value: "40hrs", icon: Clock },
       { label: "Report accuracy", value: "99.9%", icon: BarChart3 },
     ],
     tags: ["AI Agents", "FinTech", "Automation"],
@@ -18,12 +18,12 @@ const caseStudies = [
   },
   {
     client: "SaaS Enterprise",
-    title: "RAG-Powered Support",
+    title: "RAG-Powered Support System",
     description:
-      "RAG system over 10,000+ docs. Deflects tickets, accelerates resolution, keeps humans in the loop.",
+      "Retrieval pipeline over 10,000+ internal docs. Agents get instant, accurate answers. Common tickets are deflected automatically. Humans stay in the loop for complex cases.",
     metrics: [
-      { label: "Ticket reduction", value: "65%", icon: TrendingUp },
-      { label: "First-response", value: "<2s", icon: Clock },
+      { label: "Ticket deflection", value: "65%", icon: TrendingUp },
+      { label: "First response", value: "<2s", icon: Clock },
     ],
     tags: ["RAG", "Support", "NLP"],
     accent: "from-blue-500/30 to-cyan-500/10",
@@ -32,10 +32,10 @@ const caseStudies = [
     client: "HealthTech Scaleup",
     title: "Patient Portal (iOS & Android)",
     description:
-      "Cross-platform app for patient monitoring and real-time doctor comms. HIPAA-ready.",
+      "HIPAA-ready cross-platform app for real-time patient monitoring and encrypted doctor communication. Built on React Native, integrated with existing EHR systems.",
     metrics: [
       { label: "User growth", value: "3x", icon: Users },
-      { label: "App Store rating", value: "4.9", icon: BarChart3 },
+      { label: "App Store rating", value: "4.9★", icon: BarChart3 },
     ],
     tags: ["Mobile", "Healthcare", "React Native"],
     accent: "from-emerald-500/30 to-teal-500/10",
@@ -51,7 +51,7 @@ export default function CaseStudies() {
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-80px" }}
               className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] rounded-full glass text-muted-foreground mb-5"
             >
               Selected engagements
@@ -59,7 +59,7 @@ export default function CaseStudies() {
             <motion.h2
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5 }}
               className="text-4xl md:text-5xl font-semibold tracking-[-0.03em] mb-4"
             >
@@ -68,12 +68,12 @@ export default function CaseStudies() {
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: 0.05 }}
               className="text-muted-foreground text-lg"
             >
-              Representative work — we'll share detailed case studies on
-              request under NDA.
+              Three of our recent builds — across AI agents, knowledge systems,
+              and mobile. Full case studies available under NDA.
             </motion.p>
           </div>
         </div>
@@ -84,9 +84,9 @@ export default function CaseStudies() {
               key={index}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.45, delay: index * 0.06 }}
-              className="group relative rounded-2xl border border-border bg-surface/60 backdrop-blur-xl overflow-hidden hover:border-border-strong transition-all hover:-translate-y-0.5"
+              className="group relative rounded-2xl border border-border bg-surface/60 backdrop-blur-sm overflow-hidden hover:border-border-strong transition-all hover:-translate-y-0.5"
             >
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${study.accent} opacity-40 group-hover:opacity-70 transition-opacity pointer-events-none`}

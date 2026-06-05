@@ -13,6 +13,8 @@ const linkGroups: LinkGroup[] = [
       { name: "RAG Systems", href: "#services" },
       { name: "Autonomous Agents", href: "#services" },
       { name: "Mobile Apps", href: "#services" },
+      { name: "Workflow Automation", href: "#services" },
+      { name: "SaaS MVP", href: "#services" },
     ],
   },
   {
@@ -27,8 +29,10 @@ const linkGroups: LinkGroup[] = [
   {
     title: "Connect",
     links: [
-      { name: "Book a call", href: "#contact", external: true },
+      { name: "Book a call", href: "https://calendly.com/ali-hassan-sulehree/consultants", external: true },
       { name: "hello@devvertix.com", href: "mailto:hello@devvertix.com", external: true },
+      { name: "LinkedIn", href: "https://linkedin.com/company/devvertix", external: true },
+      { name: "Clutch", href: "https://clutch.co", external: true },
     ],
   },
 ];
@@ -53,8 +57,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-              A product studio shipping AI-native SaaS and mobile apps — built
-              for founders who need to move fast.
+              A product studio shipping AI-native SaaS and mobile apps —
+              built for founders in the US, Europe, and MENA.
             </p>
             <div className="flex gap-2 mt-6">
               <a

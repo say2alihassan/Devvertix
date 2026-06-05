@@ -3,6 +3,8 @@ import Services from "@/components/Services";
 import Process from "@/components/Process";
 import Projects from "@/components/Projects";
 import CaseStudies from "@/components/CaseStudies";
+import Pricing from "@/components/Pricing";
+import Testimonials from "@/components/Testimonials";
 import TechStack from "@/components/TechStack";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Contact from "@/components/Contact";
@@ -17,6 +19,8 @@ export default function Home() {
       <Process />
       <Projects />
       <CaseStudies />
+      <Pricing />
+      <Testimonials />
       <WhyChooseUs />
       <Contact />
       <Footer />

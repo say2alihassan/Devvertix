@@ -9,7 +9,7 @@ const steps = [
     title: "Discovery",
     duration: "Week 1",
     description:
-      "We map goals, users, and constraints. You leave with a technical brief and clear scope.",
+      "We map goals, users, data sources, and edge cases. You leave with a technical brief, clear scope, and no surprises.",
     icon: Search,
   },
   {
@@ -17,7 +17,7 @@ const steps = [
     title: "Architecture",
     duration: "Week 2",
     description:
-      "System design: models, infra, data. We pick the right trade-offs for your use case.",
+      "System design: models, infra, data pipelines, cost estimates. We make hard trade-offs early so you don't pay for them later.",
     icon: PenTool,
   },
   {
@@ -25,7 +25,7 @@ const steps = [
     title: "Build",
     duration: "Weeks 3–8",
     description:
-      "Bi-weekly sprints. Working software in week 4. Code reviews, eval harnesses, CI.",
+      "Bi-weekly sprints. Working software by Week 4. Code reviews, eval harnesses, CI/CD. You see progress every sprint — no black-box delivery.",
     icon: Code,
   },
   {
@@ -33,7 +33,7 @@ const steps = [
     title: "Ship",
     duration: "Week 9",
     description:
-      "Production launch. Monitoring, observability, runbooks. Store submissions & approval.",
+      "Production launch with monitoring, observability, and runbooks. App Store and Play Store submissions handled end-to-end.",
     icon: Rocket,
   },
   {
@@ -41,7 +41,7 @@ const steps = [
     title: "Scale",
     duration: "Ongoing",
     description:
-      "Iterate on real usage. Performance, cost, quality — continuously tuned.",
+      "Iterate on real usage. Performance, cost, quality — continuously tuned. We don't disappear after launch.",
     icon: TrendingUp,
   },
 ];
@@ -54,7 +54,7 @@ export default function Process() {
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-80px" }}
             className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] rounded-full glass text-muted-foreground mb-5"
           >
             How we work
@@ -62,17 +62,17 @@ export default function Process() {
           <motion.h2
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-5xl font-semibold tracking-[-0.03em] mb-4"
           >
-            A process built for{" "}
-            <span className="text-gradient">shipping</span>.
+            From kickoff to production in{" "}
+            <span className="text-gradient">9 weeks</span>.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: 0.05 }}
             className="text-muted-foreground text-lg"
           >
@@ -105,7 +105,7 @@ export default function Process() {
                   </div>
 
                   {/* Step content */}
-                  <div className="flex-1 rounded-2xl border border-border bg-surface/50 backdrop-blur-xl p-6 md:p-7 hover:border-border-strong transition-colors">
+                  <div className="flex-1 rounded-2xl border border-border bg-surface/50 backdrop-blur-sm p-6 md:p-7 hover:border-border-strong transition-colors">
                     <div className="flex flex-wrap items-baseline gap-3 mb-2">
                       <span className="font-mono text-xs text-muted-foreground">
                         {step.number}

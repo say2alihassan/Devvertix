@@ -70,7 +70,9 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-2">
           <a
-            href="#contact"
+            href="https://calendly.com/ali-hassan-sulehree/consultants"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center justify-center rounded-lg h-9 px-4 text-sm font-medium text-white bg-[linear-gradient(135deg,#8B5CF6_0%,#3B82F6_100%)] hover:brightness-110 shadow-[0_0_40px_-10px_rgba(139,92,246,0.6)] transition-all"
           >
             Get Started
@@ -109,7 +111,9 @@ export default function Navbar() {
               ))}
               <div className="p-1 pt-2">
                 <a
-                  href="#contact"
+                  href="https://calendly.com/ali-hassan-sulehree/consultants"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
                   className="inline-flex w-full items-center justify-center rounded-xl h-11 px-5 text-sm font-medium text-white bg-[linear-gradient(135deg,#8B5CF6_0%,#3B82F6_100%)] shadow-[0_0_40px_-10px_rgba(139,92,246,0.6)]"
                 >
