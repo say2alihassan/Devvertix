@@ -158,6 +158,7 @@ export default function RootLayout({
       <head>
         <meta name="geo.region" content="US" />
         <meta name="geo.placename" content="United States" />
+        <link rel="alternate" type="text/plain" title="LLMs.txt" href="/llms.txt" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

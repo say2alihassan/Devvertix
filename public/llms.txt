@@ -1,0 +1,62 @@
+# Devvertix
+
+> Devvertix is a mobile app development company and AI product studio. We build iOS & Android apps, AI-native SaaS, autonomous agents, RAG systems, and workflow automation for startups and enterprises in the US, UK, and UAE.
+
+## Who We Are
+
+Devvertix is a senior product studio founded to help founders and companies ship production-ready digital products. We have delivered 50+ products used by 1M+ end users across 9+ industries including FinTech, HealthTech, Mobility, Q-commerce, and AI SaaS.
+
+We are based in an async-first, US-timezone-aligned setup, serving clients in the United States, United Kingdom, and UAE.
+
+## What We Do
+
+### Mobile App Development (iOS & Android)
+We build cross-platform and native mobile apps using React Native, Flutter, Swift, and Kotlin. We handle the full lifecycle — design, development, App Store and Google Play submission, and post-launch support. We have shipped 50+ apps with 1M+ downloads.
+
+### AI-Native SaaS
+End-to-end AI product development from architecture to paying users. We build production AI systems — not demos or prototypes. Products that scale to real users.
+
+### Autonomous AI Agents
+Multi-step agents that plan, use tools, and recover from failure. We build agents that replace hours of manual work.
+
+### RAG & Knowledge Systems
+Production retrieval pipelines over private data. Hybrid search, reranking, and evaluation harnesses. We reduce AI hallucinations and deliver accurate answers from your own data.
+
+### AI Chatbots
+On-brand conversational assistants grounded in your data. Trained on your docs, your tone, your workflows.
+
+### Workflow Automation
+Custom automation pipelines using n8n, Make, and Zapier. Most clients reclaim 20–40 hours per week from day one.
+
+### SaaS MVP
+From validated idea to live product in 6 weeks. Full-stack web app with auth, billing, dashboard, and AI features — built to start charging users on day one.
+
+## Pricing
+
+- **Automation Sprint**: From $3,500 — 2–3 weeks
+- **MVP Launch**: From $8,000 — 6 weeks (mobile or web MVP)
+- **AI Product Build**: From $20,000 — 9 weeks (full AI-native SaaS or mobile app)
+- **Studio Retainer**: From $8,000/month — dedicated senior team
+
+All projects include NDA on Day 1, weekly demos, full source code ownership, and no vendor lock-in.
+
+## Tech Stack
+
+**Mobile**: React Native, Flutter, Swift, Kotlin
+**AI/ML**: OpenAI, Anthropic Claude, LangChain, LlamaIndex, Pinecone, Weaviate
+**Web**: Next.js, TypeScript, Node.js, Python, FastAPI
+**Cloud**: AWS, Vercel, Supabase
+**Automation**: n8n, Make, Zapier
+
+## Who We Work With
+
+- Founders building their first mobile app or AI product
+- Startups that need to move fast and ship production-ready software
+- Enterprises adding AI capabilities to existing products
+- Companies in the US, UK, and UAE
+
+## Contact
+
+- Website: https://www.devvertix.com
+- Email: hello@devvertix.com
+- Book a free strategy call: https://calendly.com/ali-hassan-sulehree/consultants
