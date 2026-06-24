@@ -5,6 +5,21 @@ import { ArrowUpRight, Clock, TrendingUp, BarChart3, Users } from "lucide-react"
 
 const caseStudies = [
   {
+    client: "Tabbio — GCC, UAE",
+    title: "AI Career Platform — iOS, Android & Web",
+    description:
+      "Built a full AI-powered career platform for the GCC market. Tabbio creates SmartCV profiles via conversation, auto-tailors CVs per job, and applies on behalf of users — in English and Arabic. Live on iOS, Android, and web.",
+    metrics: [
+      { label: "Active users", value: "18K+", icon: Users },
+      { label: "Markets served", value: "6 GCC", icon: TrendingUp },
+    ],
+    tags: ["Mobile App", "AI", "iOS & Android", "SaaS", "UAE"],
+    accent: "from-amber-500/30 to-yellow-500/10",
+    url: "https://www.tabbio.com",
+    appStore: "https://apps.apple.com/us/app/tabbio-cv-maker-job-search/id6755083658",
+    playStore: "https://play.google.com/store/apps/details?id=com.tabbio.app",
+  },
+  {
     client: "EDT Tyres — North London, UK",
     title: "Web App + AI Booking & Lead Automation",
     description:
@@ -88,7 +103,7 @@ export default function CaseStudies() {
               transition={{ duration: 0.5, delay: 0.05 }}
               className="text-muted-foreground text-lg"
             >
-              Four of our recent builds — web apps, AI automation, knowledge systems,
+              Five of our recent builds — AI platforms, web apps, automation, knowledge systems,
               and mobile. Full case studies available under NDA.
             </motion.p>
           </div>
@@ -164,17 +179,41 @@ export default function CaseStudies() {
                   ))}
                 </div>
 
-                {study.url && (
-                  <a
-                    href={study.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 text-xs text-violet-400 hover:text-violet-300 transition-colors flex items-center gap-1"
-                  >
-                    View live site
-                    <ArrowUpRight className="w-3 h-3" />
-                  </a>
-                )}
+                <div className="mt-4 flex flex-col gap-1.5">
+                  {study.url && (
+                    <a
+                      href={study.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-violet-400 hover:text-violet-300 transition-colors flex items-center gap-1"
+                    >
+                      View live site
+                      <ArrowUpRight className="w-3 h-3" />
+                    </a>
+                  )}
+                  {"appStore" in study && study.appStore && (
+                    <a
+                      href={study.appStore as string}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-violet-400 hover:text-violet-300 transition-colors flex items-center gap-1"
+                    >
+                      App Store
+                      <ArrowUpRight className="w-3 h-3" />
+                    </a>
+                  )}
+                  {"playStore" in study && study.playStore && (
+                    <a
+                      href={study.playStore as string}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-violet-400 hover:text-violet-300 transition-colors flex items-center gap-1"
+                    >
+                      Google Play
+                      <ArrowUpRight className="w-3 h-3" />
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
