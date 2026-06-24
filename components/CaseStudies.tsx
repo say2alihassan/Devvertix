@@ -5,7 +5,20 @@ import { ArrowUpRight, Clock, TrendingUp, BarChart3, Users } from "lucide-react"
 
 const caseStudies = [
   {
-    client: "FinTech Startup",
+    client: "EDT Tyres — North London, UK",
+    title: "Web App + AI Booking & Lead Automation",
+    description:
+      "Built a full web app with AI-powered booking system and lead automation for a North London tyre shop. Enquiries are handled automatically — no VA needed. The owner focuses on the workshop; the system handles the rest.",
+    metrics: [
+      { label: "Lead growth", value: "2x", icon: TrendingUp },
+      { label: "VA cost saved", value: "£0/mo", icon: BarChart3 },
+    ],
+    tags: ["Web App", "AI Automation", "Booking System", "UK"],
+    accent: "from-rose-500/30 to-orange-500/10",
+    url: "https://edttyres.co.uk",
+  },
+  {
+    client: "FinTech Startup — USA",
     title: "Automated Financial Reporting Agent",
     description:
       "A multi-agent system that connects to 6 data sources, generates formatted reports on schedule, and flags anomalies — autonomously. Replaced 40 hours of manual analyst work every week.",
@@ -15,9 +28,10 @@ const caseStudies = [
     ],
     tags: ["AI Agents", "FinTech", "Automation"],
     accent: "from-violet-500/30 to-fuchsia-500/10",
+    url: null,
   },
   {
-    client: "SaaS Enterprise",
+    client: "SaaS Enterprise — UK",
     title: "RAG-Powered Support System",
     description:
       "Retrieval pipeline over 10,000+ internal docs. Agents get instant, accurate answers. Common tickets are deflected automatically. Humans stay in the loop for complex cases.",
@@ -27,9 +41,10 @@ const caseStudies = [
     ],
     tags: ["RAG", "Support", "NLP"],
     accent: "from-blue-500/30 to-cyan-500/10",
+    url: null,
   },
   {
-    client: "HealthTech Scaleup",
+    client: "HealthTech Scaleup — UAE",
     title: "Patient Portal (iOS & Android)",
     description:
       "HIPAA-ready cross-platform app for real-time patient monitoring and encrypted doctor communication. Built on React Native, integrated with existing EHR systems.",
@@ -39,6 +54,7 @@ const caseStudies = [
     ],
     tags: ["Mobile", "Healthcare", "React Native"],
     accent: "from-emerald-500/30 to-teal-500/10",
+    url: null,
   },
 ];
 
@@ -72,13 +88,13 @@ export default function CaseStudies() {
               transition={{ duration: 0.5, delay: 0.05 }}
               className="text-muted-foreground text-lg"
             >
-              Three of our recent builds — across AI agents, knowledge systems,
+              Four of our recent builds — web apps, AI automation, knowledge systems,
               and mobile. Full case studies available under NDA.
             </motion.p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {caseStudies.map((study, index) => (
             <motion.div
               key={index}
@@ -97,7 +113,19 @@ export default function CaseStudies() {
                   <span className="text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
                     {study.client}
                   </span>
-                  <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
+                  {study.url ? (
+                    <a
+                      href={study.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
+                    </a>
+                  ) : (
+                    <ArrowUpRight className="w-4 h-4 text-muted-foreground/30" />
+                  )}
                 </div>
 
                 <h3 className="text-xl font-semibold mb-3 tracking-tight">
@@ -135,6 +163,18 @@ export default function CaseStudies() {
                     </span>
                   ))}
                 </div>
+
+                {study.url && (
+                  <a
+                    href={study.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 text-xs text-violet-400 hover:text-violet-300 transition-colors flex items-center gap-1"
+                  >
+                    View live site
+                    <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
