@@ -59,9 +59,10 @@ const services: Service[] = [
     accent: "from-amber-500/15 to-transparent",
   },
   {
-    title: "Mobile (iOS & Android)",
+    title: "Mobile App Development (iOS & Android)",
     description:
-      "Cross-platform (React Native, Flutter) and native Swift/Kotlin. 50+ products live across the App Store and Google Play. We handle store submissions, rejections, and approvals end-to-end.",
+      "Custom mobile app development using React Native, Flutter, Swift & Kotlin. 50+ apps live on the App Store and Google Play. We manage design, development, and store submissions — start to finish.",
+    badge: "React Native · Flutter · Swift · Kotlin",
     icon: Smartphone,
     span: "md:col-span-2",
     accent: "from-rose-500/15 to-transparent",
@@ -108,8 +109,8 @@ export default function Services() {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-5xl font-semibold tracking-[-0.03em] mb-4"
           >
-            Everything you need to ship an{" "}
-            <span className="text-gradient">AI product</span>.
+            Mobile app development &{" "}
+            <span className="text-gradient">AI services</span>.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 12 }}

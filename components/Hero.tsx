@@ -64,7 +64,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.05, ease: "easeOut" }}
           className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-[-0.04em] text-foreground mb-6 leading-[1.02]"
         >
-          Ship AI products
+          Mobile App & AI Products
           <br />
           <span className="text-gradient">users actually love.</span>
         </motion.h1>
@@ -75,10 +75,10 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
           className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
         >
-          Devvertix is a product studio for founders building{" "}
-          <span className="text-foreground">AI-native SaaS</span> and{" "}
-          <span className="text-foreground">mobile apps</span>. We've delivered 50+ products to 1M+ users
-          across the US, UK, and UAE — and we'd like to ship yours next.
+          Devvertix is a <span className="text-foreground">mobile app development company</span> and product studio for founders building{" "}
+          <span className="text-foreground">iOS & Android apps</span> and{" "}
+          <span className="text-foreground">AI-native SaaS</span>. 50+ products delivered to 1M+ users
+          across the US, UK, and UAE — we ship yours next.
         </motion.p>
 
         <motion.p
