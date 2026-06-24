@@ -105,7 +105,7 @@ export default function Contact() {
               className="space-y-3"
             >
               <a
-                href="mailto:hello@devvertix.com"
+                href="mailto:info@devvertix.com"
                 className="flex items-center gap-4 p-4 rounded-xl border border-border bg-surface/50 backdrop-blur-sm hover:border-border-strong transition-colors group"
               >
                 <div className="w-10 h-10 rounded-lg border border-border bg-surface-elevated flex items-center justify-center">
@@ -114,7 +114,7 @@ export default function Contact() {
                 <div className="flex-1">
                   <div className="text-sm font-semibold">Email us</div>
                   <div className="text-xs text-muted-foreground">
-                    hello@devvertix.com
+                    info@devvertix.com
                   </div>
                 </div>
                 <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground group-hover:translate-x-0.5 transition-all" />

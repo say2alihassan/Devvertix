@@ -30,7 +30,7 @@ const linkGroups: LinkGroup[] = [
     title: "Connect",
     links: [
       { name: "Book a call", href: "https://calendly.com/ali-hassan-sulehree/consultants", external: true },
-      { name: "hello@devvertix.com", href: "mailto:hello@devvertix.com", external: true },
+      { name: "info@devvertix.com", href: "mailto:info@devvertix.com", external: true },
       { name: "LinkedIn", href: "https://linkedin.com/company/devvertix", external: true },
       { name: "Clutch", href: "https://clutch.co", external: true },
     ],

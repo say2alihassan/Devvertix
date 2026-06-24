@@ -3,7 +3,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "hello@devvertix.com";
+const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "info@devvertix.com";
 const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "Devvertix <onboarding@resend.dev>";
 
 function isValidEmail(email: string) {
@@ -72,7 +72,7 @@ export async function POST(req: Request) {
     if (error) {
       console.error("Resend error:", error);
       return NextResponse.json(
-        { error: "Failed to send. Please email hello@devvertix.com directly." },
+        { error: "Failed to send. Please email info@devvertix.com directly." },
         { status: 502 }
       );
     }

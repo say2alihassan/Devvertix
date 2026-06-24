@@ -5,7 +5,7 @@ import { Resend } from "resend";
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "hello@devvertix.com";
+const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "info@devvertix.com";
 const FROM_EMAIL =
   process.env.CONTACT_FROM_EMAIL || "Devvertix <onboarding@resend.dev>";
 
@@ -44,7 +44,7 @@ Devvertix helps founders ship production-ready Generative AI systems and scalabl
 # Tone
 Direct, warm, technically credible. Keep responses short (2–4 sentences typical). No hype, no exclamation spam. Use markdown sparingly — mostly plain prose.
 
-If the visitor asks for direct contact, point them to hello@devvertix.com or the contact form on the page.`;
+If the visitor asks for direct contact, point them to info@devvertix.com or the contact form on the page.`;
 
 const tools: OpenAI.Chat.Completions.ChatCompletionTool[] = [
   {
@@ -227,7 +227,7 @@ export async function POST(req: Request) {
           console.error("Lead email failed:", error);
           return NextResponse.json({
             reply:
-              "Got it — I couldn't send the notification automatically, but you can reach the team at hello@devvertix.com and they'll follow up within 24 hours.",
+              "Got it — I couldn't send the notification automatically, but you can reach the team at info@devvertix.com and they'll follow up within 24 hours.",
           });
         }
 
@@ -246,7 +246,7 @@ export async function POST(req: Request) {
   } catch (err) {
     console.error("Chat route error:", err);
     return NextResponse.json(
-      { error: "Something went wrong. Please try again or email hello@devvertix.com." },
+      { error: "Something went wrong. Please try again or email info@devvertix.com." },
       { status: 500 }
     );
   }
